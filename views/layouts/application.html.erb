@@ -15,8 +15,16 @@ end
 <html>
   <body>
     <h1>You're using a layout</h1>
+
+<form method='post' action="<%= @request.path %>">
+            First name: <input type="text" name="first_name" placeholder='first name'/><br />
+            <input type="submit" value="Submit" />
+        </form>
+
+    
+    <%= @request.query.inspect %>
     <p>
-      <h3> I'm a header</h3>
+      <h3> I'm a header<%= Time.now %></h3>
       <p><%= link_to('Google', 'http://www.google.com') %>, <a href="http://www.yahoo.com">Here is a link to Yahoo</a></p>
       <a href='me.html'>Me</a>
 
